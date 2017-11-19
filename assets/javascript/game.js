@@ -62,7 +62,6 @@ $(document).ready(function () {
         totalScore += blueValue;
         //Display the new score:
         $("#totalScore").text(totalScore);
-        
         updateWinsLosses();
 
     });
@@ -121,7 +120,7 @@ $(document).ready(function () {
             setCrystalsValues();
         }
         
-    }
+    };
 
     
 });
