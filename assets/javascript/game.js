@@ -61,7 +61,7 @@ $(document).ready(function () {
         //Add the blue value to the value of score:
         totalScore += blueValue;
         //Display the new score:
-        $("#totalScore").text(totalScore);
+        $("#totalScore").text(totalScore);        
         updateWinsLosses();
 
     });
