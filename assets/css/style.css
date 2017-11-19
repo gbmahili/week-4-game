@@ -1,0 +1,64 @@
+body{
+    background: #F5F5F5;
+    font-family: 'Roboto', sans-serif;
+}
+.instructions{
+    background: #FAFAFA;
+    padding: 5px;
+    font-size: 16px;
+    text-align: center;
+    line-height: 30px;
+    color: #414141;
+    font-weight: 300;
+}
+h1{
+    font-size: 41px;
+}
+
+.card {
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  background: #FFF;
+}
+
+.random-number, .total-score, .middle-section, .total-score-div{
+    padding: 30px;
+    min-height: 150px;
+}
+
+.wins-losses{
+    padding: 10px;
+    min-height: 150px;
+}
+
+.img-responsive{
+    height: 100px;
+    widows: 75px;
+}
+
+@media screen and (max-width: 500px) {
+    .instructions{
+        padding: 2px;
+        font-size: 12px;
+        text-align: center;
+        line-height: 20px;
+        color: #414141;
+        font-weight: normal;
+    }
+    h1{
+        font-size: 22px;
+    }
+    .middle-section h2{
+        font-size: 15px;
+    }
+    .random-number, .total-score, .middle-section, .total-score-div{
+        padding: 15px;
+        min-height: 100px;
+    }
+
+    .wins-losses{
+        padding: 5px;
+        min-height: 75px;
+    }
+
+
+}
