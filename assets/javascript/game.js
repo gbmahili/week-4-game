@@ -98,7 +98,7 @@ $(document).ready(function () {
             //Increase wins count
             wins++;
             //Update wins value field
-            $("#wins").text(wins);
+            $("#wins").text(wins).css("color", "green");
             generateRandomNumber(); 
             totalScore = 0;
             $("#totalScore").text(totalScore);
@@ -112,7 +112,7 @@ $(document).ready(function () {
             //Increment losses value
             losses++;
             //Update losses value field
-            $("#losses").text(losses);
+            $("#losses").text(losses).css("color", "red");
             generateRandomNumber();
             //We then set the totalScore back to 0;
             totalScore = 0;
