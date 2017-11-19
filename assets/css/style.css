@@ -1,6 +1,7 @@
 body{
     background: #F5F5F5;
     font-family: 'Roboto', sans-serif;
+    color: #414141;
 }
 .instructions{
     background: #FAFAFA;
@@ -12,16 +13,16 @@ body{
     font-weight: 300;
 }
 h1{
-    font-size: 41px;
+    font-size: 45px;
 }
 
 .card {
-  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
   background: #FFF;
 }
 
 .random-number, .total-score, .middle-section, .total-score-div{
-    padding: 30px;
+    padding: 20px;
     min-height: 150px;
 }
 
@@ -33,6 +34,11 @@ h1{
 .img-responsive{
     height: 100px;
     widows: 75px;
+    cursor: pointer;
+}
+
+.img-responsive:hover{
+    opacity: .8;
 }
 
 @media screen and (max-width: 500px) {
