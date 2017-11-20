@@ -82,8 +82,13 @@ $(document).ready(function () {
 
     //Create function to check if totalScore is equal or greater than the random number
     function updateWinsLosses(){
+        
         //Update Wins
         if (totalScore == randomNumber) {
+            $(".modal-title").text("CONGRATULATIONS");
+            $(".modal-body").text("Way to go...YOU WON!");
+            $(".win-modal").click();
+            
             //Increase wins count
             wins++;
             //Update wins value field
@@ -94,6 +99,9 @@ $(document).ready(function () {
 
         //Update losses: same concept as update wins above
         if (totalScore > randomNumber) {
+            $(".modal-title").text("UH OH...");
+            $(".modal-body").text("You just lost...Try again!");
+            $(".win-modal").click();
             losses++;
             $("#losses").text(losses).css("color", "red");
             getNewValues();
