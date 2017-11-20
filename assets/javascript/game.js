@@ -12,16 +12,14 @@ $(document).ready(function () {
     }
 
     //2. Generate 4 unique random numbers between 1 and 12 for each crystal:
-    function generateCrystalValues() {        
+    function generateCrystalValues() {       
     
         crystalValuesArray = []
         while (crystalValuesArray.length < 4) {
-            crystalValueRandomNumber = Math.ceil(Math.random() * 12)
+            crystalValueRandomNumber = Math.ceil(Math.random() * 12);
             if (crystalValuesArray.indexOf(crystalValueRandomNumber) > -1) continue;
             crystalValuesArray[crystalValuesArray.length] = crystalValueRandomNumber;
         }
-        return crystalValuesArray;
-
     }
 
     //##Set each Crystal with its random number in this order: red, blue, yellow, green:
@@ -50,17 +48,15 @@ $(document).ready(function () {
         totalScore += redValue;
         //Display the new score:
         $("#totalScore").text(totalScore);
+        //Call the updateWinsLosses function
         updateWinsLosses();
         
     });
 
-    //On Blue Click:
+    //On Blue Click: Same concept as red.
     $(".blue").click(function () {
-        //Set the data value and get it, then store it in a variable using chained methods..change it to a number:
         blueValue = parseInt(($(this).data("value", crystalValues.blue)).data("value"));
-        //Add the blue value to the value of score:
         totalScore += blueValue;
-        //Display the new score:
         $("#totalScore").text(totalScore);        
         updateWinsLosses();
 
@@ -68,11 +64,8 @@ $(document).ready(function () {
 
     //On Blue Click:
     $(".yellow").click(function () {
-        //Set the data value and get it, then store it in a variable using chained methods..change it to a number:
         yellowValue = parseInt(($(this).data("value", crystalValues.yellow)).data("value"));
-        //Add the yellow value to the value of score:
         totalScore += yellowValue;
-        //Display the new score:
         $("#totalScore").text(totalScore);
         updateWinsLosses();
 
@@ -80,11 +73,8 @@ $(document).ready(function () {
 
     //On Blue Click:
     $(".green").click(function () {
-        //Set the data value and get it, then store it in a variable using chained methods..change it to a number:
         greenValue = parseInt(($(this).data("value", crystalValues.green)).data("value"));
-        //Add the green value to the value of score:
         totalScore += greenValue;
-        //Display the new score:
         $("#totalScore").text(totalScore);
         updateWinsLosses();
 
@@ -98,29 +88,29 @@ $(document).ready(function () {
             wins++;
             //Update wins value field
             $("#wins").text(wins).css("color", "green");
-            generateRandomNumber(); 
-            totalScore = 0;
-            $("#totalScore").text(totalScore);
-            generateCrystalValues();
-            setCrystalsValues();
-
+            //Call the getNewValues
+            getNewValues(); 
         }
 
-        //Update losses
+        //Update losses: same concept as update wins above
         if (totalScore > randomNumber) {
-            //Increment losses value
             losses++;
-            //Update losses value field
             $("#losses").text(losses).css("color", "red");
-            generateRandomNumber();
-            //We then set the totalScore back to 0;
-            totalScore = 0;
-            $("#totalScore").text(totalScore);
-            generateCrystalValues();
-            setCrystalsValues();
-        }
-        
+            getNewValues();
+        }        
     };
 
-    
+    //Get New Values
+    function getNewValues() {
+        //Reset the score to zero 
+        totalScore = 0;
+        //The update the score field with the zero
+        $("#totalScore").text(totalScore);
+        //We then generate a new random number
+        generateRandomNumber();
+        //Followed by generating new crystal values from the random number between 1 and 12
+        generateCrystalValues();
+        //We then set the generated numbers to each crystal
+        setCrystalsValues();
+    };
 });
