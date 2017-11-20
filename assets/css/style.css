@@ -13,7 +13,7 @@ body{
     font-weight: 300;
 }
 h1{
-    font-size: 30px;
+    font-size: 45px;
     font-variant: small-caps;
 }
 
@@ -25,7 +25,7 @@ h1{
 
 .random-number, .total-score, .middle-section, .total-score-div{
     padding: 20px;
-    min-height: 120px;
+    min-height: 150px;
 }
 
 .middle-section{
@@ -34,7 +34,7 @@ h1{
 
 .wins-losses{
     padding: 10px;
-    min-height: 120px;
+    min-height: 150px;
 }
 
 #randomNumberField{
